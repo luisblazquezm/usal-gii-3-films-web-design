@@ -1,0 +1,19 @@
+body {
+	color: white;
+	background-color: silver;
+	font-family: Arial, sans-serif;
+	font-size: 100%;
+}
+
+/* SIgnifica que (de derecha a izquierda) busca un tag fuerte(strong) dentro de un enlace (a) dentro de una lista de items (li) desordenada (ul)*/
+/* Y le aplica el color rojo de letra*/
+ul li a strong {
+	color: red;
+}
+
+#footer {
+	color: white;
+	background-color: red;
+	font-family: Arial, sans-serif;
+	font-size: 100%;
+}
