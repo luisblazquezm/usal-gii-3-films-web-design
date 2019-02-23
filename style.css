@@ -17,3 +17,22 @@ ul li a strong {
 	font-family: Arial, sans-serif;
 	font-size: 100%;
 }
+
+.align-right{
+	text-align:right;
+  	color: purple;
+ 	font-weight: bold;
+}
+
+.top{
+  position: absolute;
+  top: -40px;
+  right: 10px;
+  background-color: yellow
+}
+.bottom{
+  position: absolute;
+  bottom: -40px;
+  left:60px;
+  background-color: green
+}
