@@ -1,5 +1,5 @@
 body {
-	color: white;
+	color: yellow;
 	background-color: silver;
 	font-family: Arial, sans-serif;
 	font-size: 100%;
@@ -24,12 +24,18 @@ ul li a strong {
  	font-weight: bold;
 }
 
-.top{
-  position: absolute;
-  top: -40px;
-  right: 10px;
-  background-color: yellow
+/* Tipo de id para la cabecera de la página web Sinopsis|Necesidades|Tecnologia|...*/
+
+#top{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 30% auto;
+  background-color: red;
 }
+
 .bottom{
   position: absolute;
   bottom: -40px;
