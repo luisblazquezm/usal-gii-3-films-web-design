@@ -1,6 +1,5 @@
 body {
-	color: yellow;
-	background-color: silver;
+	background-image: url()
 	font-family: Arial, sans-serif;
 	font-size: 100%;
 }
@@ -11,29 +10,16 @@ ul li a strong {
 	color: red;
 }
 
-#footer {
-	color: white;
-	background-color: red;
-	font-family: Arial, sans-serif;
-	font-size: 100%;
-}
-
-.align-right{
-	text-align:right;
-  	color: purple;
- 	font-weight: bold;
-}
-
 /* Tipo de id para la cabecera de la página web Sinopsis|Necesidades|Tecnologia|...*/
 
 #top{
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 450 auto;
   padding: 15px 20px;
   margin-top: 30px;
-  display: grid;
+  display: inline;
   grid-template-columns: 30% auto;
-  background-color: red;
+  background-color: yellow;
 }
 
 .bottom{
