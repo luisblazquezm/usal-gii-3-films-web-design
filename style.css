@@ -12,35 +12,17 @@ body {
 	font-size: 100%;
 }
 
-div.title h2{
-    font-family: 'Century Gothic';
-    float: left;
-    font-size: 39px;
-    float: left;
-}
-
-div.image{
-    content: url(59bed6cf7a216d0b052f1264.png);
-    width: 230px;
-    height: 150px;
-    float: left;
-    padding-left: 304px;
-}
-
 /* 
  =========================================================
  Header
  ========================================================= */
 
-#top{
-  max-width: 1200px;
-  min-width: 1000px;
-  margin: 450 auto;
-  padding: 15px 200px 10px 20px;
-  padding-bottom: 50px;
-  margin-bottom: 50px;
-  margin-top: 300px;
-  display: inline;
+nav {
+  font-size: 20px;
+  padding-bottom: 10px;
+  padding-top: 19px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   grid-template-columns: 30% auto;
   text-transform: uppercase;
 }
@@ -64,10 +46,9 @@ div.image{
  ========================================================= */
 
 #Sinopsis{
-    padding-top: 5px;
-    margin-top: 50px;
+    padding-top: 20px;
+    margin-top: 20px;
     grid-area: sinopsisGrid;
-    background-color: aqua;
 }
 
 /* Text content of this area*/
