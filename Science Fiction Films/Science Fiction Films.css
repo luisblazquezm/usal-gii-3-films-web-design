@@ -6,6 +6,24 @@
 
 /* As hex codes */
 
+/* ==========================================================================
+   Fonts Used
+   ========================================================================== */
+
+@font-face{
+    font-family: 'Star Wars';
+    src: url('./fonts/Death_Star.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'Tron';
+    src: url('./fonts/Tr2n.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Blade Runner';
+    src: url('./fonts/BLADRMF_.ttf') format('truetype');
+}
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -14,8 +32,7 @@
 /* Body of all the content in the page */
 
 body{
-	background-color: #EEEEEE; /* color-primary-1 */
-	font-family: 'Oxygen';
+    background-image: url(imgs/Interestelar2.jpg);
 	font-size: 100%;
     
     padding-left: 40px;
@@ -57,9 +74,16 @@ body{
 
 /* Header of the webpage */
 
+
+nav::before{
+    content: url(Interestelar2.jpg);
+}
+
+
 nav {
   font-size: 20px;
-
+  font-family: 'Tron';
+    
   padding-top: 19px;
   margin-top: 10px;
     
@@ -82,7 +106,7 @@ nav {
 }
 
 #top a:hover, #top.a:active {
-    background-color: #D6CF40; /* .color-primary-3 */
+    background-color: #000000; /* .color-primary-3 */
 }
 
 /* 
