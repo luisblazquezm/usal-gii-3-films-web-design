@@ -170,6 +170,7 @@ nav {
 /* Main title of every subarea (Gadget) */
 
 .need_value_main{
+    font-family: 'Oswald';
     grid-column: 1 / 1;
     grid-row: 2;
 }
