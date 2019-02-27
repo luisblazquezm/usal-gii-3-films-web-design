@@ -1,11 +1,27 @@
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
 
 /* ==========================================================================
+   Colors Used
+   ========================================================================== */
+
+/* As hex codes */
+
+.color-primary-1 { color: #EEEEEE } /* light gray */
+.color-primary-2 { color: #808080 } /* smooth grey */
+.color-primary-3 { color: #D6CF40 } /* dark yellow */
+.color-primary-4 { color: #FFFFFF } /* white */
+.color-primary-5 { color: #000000 } /* black */
+.color-primary-6 { color: #FFF645 } /* light yellow */
+
+
+/* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
+/* Body of all the content in the page */
+
 body{
-	background-color: #EEEEEE;
+	background-color: #EEEEEE; /* color-primary-1 */
 	font-family: 'Oxygen';
 	font-size: 100%;
     
@@ -20,16 +36,33 @@ body{
 
 @charset "utf-8";
 
+/* Anchor to go up to the front of the page */
+
 .to_top{
-    content: url(Ancla.jpg);
-    width: 190px;
-    
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 30px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+.to_top:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }
 
 /* 
  =========================================================
  Header
  ========================================================= */
+
+/* Header of the webpage */
 
 nav {
   font-size: 20px;
@@ -40,16 +73,10 @@ nav {
   padding-bottom: 10px;
   margin-bottom: 10px;
     
-  padding-left: 40px;
-  margin-left: 40px;
-    
-  padding-right: 40px;
-  margin-right: 40px;
-    
   text-align: center;
   text-transform: uppercase;
     
-  background-color: darkgrey;
+  background-color: #808080; /* .color-primary-2 */
 }
 
 /* Highlights the links to the different sections when the mouse arrow is over it (Sinopsis, Necesidades, ...)*/
@@ -62,7 +89,7 @@ nav {
 }
 
 #top a:hover, #top.a:active {
-    background-color: orangered;
+    background-color: #D6CF40; /* .color-primary-3 */
 }
 
 /* 
@@ -70,21 +97,47 @@ nav {
  All sections
  ========================================================= */
 
+/* Content of the different areas */
+
 #Sinopsis , #Necesidades , #Tecnologias, #Impacto, #Referencias{
-    padding-top: 10px;
-    margin-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
     
-    padding-left: 20px;
-    margin-left: 20px;
-    
-    padding-right: 20px;
-    margin-right: 20px;
+    background-color: #FFFFFF; /* .color-primary-4 */
 }
+
+/* Titles of the different areas */
+
+.section_title{
+    text-align: center;
+    background-color: #000000; /* .color-primary-5 */
+    color: #FFF645; /* .color-primary-6 */
+    height: 60px;
+    font-size: 25px;
+}
+
 
 /* 
  =========================================================
  Necesidades Area
  ========================================================= */
+
+/* Subareas of the main area 'Necesidades' (Gadget1, Gadget2, ...)*/
+
+.need{
+  padding-top: 19px;
+  margin-top: 10px;
+    
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+    
+  padding-left: 20px;
+  margin-left: 20px;
+    
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
 
 /* Grid-area created for every Gadget --> 6 rows and 2 columns */
 
@@ -100,36 +153,53 @@ nav {
 /* Line that separates each gadget description */
 
 .separador{
-    color: black;
-    width: 1300px;
+    color: #000000;
+    width: 1260px;
     margin-top: 50px;
     overflow: visible;
     clear: both;
 }
+
+/* Main title of the subarea (Dispositivo (Interfaz/tecnología))*/
 
 .need_title_main{
     grid-column: 1 / 2;
     grid-row: 1;
 }
 
+/* Main title of every subarea (Gadget) */
+
 .need_value_main{
     grid-column: 1 / 1;
     grid-row: 2;
 }
 
+/* 'Primera Aparición' subtitle */
+
 #Title1_1, #Title2_1, #Title3_1, #Title4_1, #Title5_1, #Title6_1, #Title7_1{
+    color: darkgrey;
     grid-column: 1 / 1;
     grid-row: 3;
 }
 
+/* Value of the first appearance*/
+
 #Value1, #Value2, #Value3, #Value4, #Value5, #Value6, #Value7{
+    color: darkgrey;
+    margin-top: 21px;
     grid-column: 1 / 1;
-    grid-row: 4;
+    grid-row: 3;
+    text-align: center;
 }
 
+/* Subtitles and description of every gadget first appearance */
+
 #Title1_2, #Text1, #Title2_2, #Text2, #Title3_2, #Text3, #Title4_2, #Text4, #Title5_2, #Text5, #Title6_2, #Text6, #Title7_2, #Text7{
+    color: darkgrey;
     grid-column: 1 / 1;
 }
+
+/* Parameters of the videos and the image */
 
 #video1, #img1, #video2, #video3, #video4, #video5, #video6{
     grid-column: 2;
@@ -145,26 +215,19 @@ nav {
  Tecnologias Area
  ========================================================= */
 
-#Tecnologias{
-    grid-area: tecnologiasGrid;
+.subsection_title {
+    padding-left: 10px;
+    margin-left: 10px;
+    
+    padding-right: 10px;
+    margin-right: 10px;
 }
 
-/* 
- =========================================================
- Impacto Area
- ========================================================= */
-
-#Impacto{
-    grid-area: impactoGrid;
+.section_text, .subsection_text{
+    padding-left: 20px;
+    margin-left: 20px;
+    
+    padding-right: 20px;
+    margin-right: 20px;
 }
-
-/* 
- =========================================================
- Referencias Area
- ========================================================= */
-
-#Referencias{
-    background-color: white
-}
-
 
