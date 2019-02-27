@@ -4,13 +4,17 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-/**/
 /* Color: Light Peach or Grey */
 body {
 	background-color: #EEEEEE;
 	font-family: 'Oxygen';
 	font-size: 100%;
+    @charset "utf-8";
 }
+
+/* Solves the special characters not being recognized */
+
+@charset "utf-8";
 
 /* 
  =========================================================
@@ -22,7 +26,12 @@ nav {
   padding-bottom: 10px;
   padding-top: 19px;
   margin-bottom: 10px;
+  padding-left: 40px;
+  margin-left: 40px;
+  padding-right: 40px;
+  margin-right: 40px;
   margin-top: 10px;
+  text-align: center;
   grid-template-columns: 30% auto;
   text-transform: uppercase;
 }
@@ -42,12 +51,16 @@ nav {
 
 /* 
  =========================================================
- Sinopsis Area
+ All sections
  ========================================================= */
 
-#Sinopsis{
-    padding-top: 20px;
-    margin-top: 20px;
+#Sinopsis , #Necesidades , #Tecnologias, #Impacto , #Referencias{
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-left: 40px;
+    margin-left: 40px;
+    padding-right: 40px;
+    margin-right: 40px;
     grid-area: sinopsisGrid;
 }
 
@@ -64,7 +77,49 @@ nav {
 
 #Necesidades{
     grid-area: necesidadesGrid;
-    background-color: red
+    background-color: red;
+}
+
+necesidadesGrid{
+    background-color: aliceblue;
+}
+
+.separador {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    overflow: visible;
+    clear: both;
+}
+
+#Texto1, #Titulo1{
+    float: left;
+}
+
+#video1{
+    float: right;
+}
+
+.media , div img{
+    object-position: top; 
+    float: right;
+    height: 300px;
+    width: 350px;
+    padding-top: 0px;
+    
+}
+
+div img {
+    height: 300px;
+    width: 500px;
+    float: left;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+
+#last_video{
+    margin-bottom: 29;
 }
 
 /* 
