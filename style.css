@@ -85,13 +85,19 @@ necesidadesGrid{
 }
 
 .separador {
+    grid-area: myArea;
     margin-top: 50px;
     margin-bottom: 70px;
     overflow: visible;
     clear: both;
 }
 
-#Texto1, #Titulo1{
+#Dispositivo1{
+    display: grid;
+    grid-template-areas: 'myArea myArea'
+}
+
+#Texto1{
     float: left;
 }
 
