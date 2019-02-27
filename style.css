@@ -20,6 +20,12 @@ body{
 
 @charset "utf-8";
 
+.to_top{
+    content: url(Ancla.jpg);
+    width: 190px;
+    
+}
+
 /* 
  =========================================================
  Header
