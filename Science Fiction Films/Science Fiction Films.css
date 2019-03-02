@@ -247,6 +247,9 @@ nav {
     padding-left: 10px;
     margin-left: 10px;
     
+    font-style: italic;
+    text-decoration: underline;
+    
     padding-right: 10px;
     margin-right: 10px;
 }

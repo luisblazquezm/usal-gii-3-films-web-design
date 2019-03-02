@@ -109,6 +109,7 @@ nav {
 /* Titles of the different areas */
 
 .section_title{
+    padding-top: 20px;
     text-align: center;
     background-color: #000000; /* .color-primary-5 */
     color: #FFF645; /* .color-primary-6 */
@@ -171,6 +172,7 @@ nav {
 
 .need_value_main{
     font-family: 'Oswald';
+    text-decoration: underline;
     grid-column: 1 / 1;
     grid-row: 2;
 }
@@ -178,7 +180,7 @@ nav {
 /* 'Primera Aparición' subtitle */
 
 #Title1_1, #Title2_1, #Title3_1, #Title4_1, #Title5_1, #Title6_1, #Title7_1{
-    color: darkgrey;
+    color: black;
     grid-column: 1 / 1;
     grid-row: 3;
 }
@@ -200,6 +202,10 @@ nav {
     grid-column: 1 / 1;
 }
 
+#Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2{
+    color: #000000;
+}
+
 /* Parameters of the videos and the image */
 
 .media{
@@ -219,6 +225,9 @@ nav {
 .subsection_title {
     padding-left: 10px;
     margin-left: 10px;
+    
+    font-style: italic;
+    text-decoration: underline;
     
     padding-right: 10px;
     margin-right: 10px;
