@@ -42,11 +42,8 @@ body{
     background-color: #011431; /* color-primary-1*/
 	font-size: 100%;
     
-    padding-left: 40px;
-    margin-left: 40px;
-    
-    padding-right: 40px;
-    margin-right: 40px;
+    margin: 0 auto; /* IMPORTANT --> these two things to make it centered and static */
+    width:  1260px;
 }
 
 /* Solves the special characters not being recognized */
