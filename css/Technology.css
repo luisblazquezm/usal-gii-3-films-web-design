@@ -23,33 +23,33 @@
 
 @font-face{
     font-family: 'Barlow';
-    src: url('./fonts/Barlow/Barlow-Regular.ttf') format('truetype');
+    src: url('../fonts/Technology/Barlow/Barlow-Regular.ttf') format('truetype');
 }
 
 @font-face{
     font-family: 'Barlow Thin';
-    src: url('./fonts/Barlow/Barlow-Thin.ttf') format('truetype');
+    src: url('./fonts/Technology/Barlow/Barlow-Thin.ttf') format('truetype');
 }
 
 @font-face{
     font-family: 'Barlow Thin Italic';
-    src: url('./fonts/Barlow/Barlow-Thin.ttf') format('truetype');
+    src: url('./fonts/Technology/Barlow/Barlow-Thin.ttf') format('truetype');
 }
 
 @font-face{
     font-family: 'Barlow Medium';
-    src: url('./fonts/Barlow/Barlow-Medium.ttf') format('truetype');
+    src: url('./fonts/Technology/Barlow/Barlow-Medium.ttf') format('truetype');
 }
 
 
 @font-face{
     font-family: 'Roboto';
-    src: url('./fonts/Roboto/Roboto-Thin.ttf') format('truetype');
+    src: url('./fonts/Technology/Roboto/Roboto-Thin.ttf') format('truetype');
 }
 
 @font-face{
     font-family: 'Roboto Thin Italic';
-    src: url('./fonts/Roboto/Roboto-ThinItalic.ttf') format('truetype');
+    src: url('./fonts/Technology/Roboto/Roboto-ThinItalic.ttf') format('truetype');
 }
 
 /* ==========================================================================
