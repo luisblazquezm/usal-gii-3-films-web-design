@@ -6,29 +6,50 @@
 
 /* As hex codes */
 
-.color-primary-1 { color: #011431 } /* dark intense blue */
-.color-primary-2 { color: #3F3F8C } /* light purple */
-.color-primary-3 { color: #000000 } /* black */
-.color-primary-4 { color: #BDBDE0 } /* smooth purple */
-.color-primary-5 { color: #FF0000 } /* red */
+.color-primary-1 { color: #2C3539 } /* gunmetal gray */
+.color-primary-2 { color: #F9F9FF } /* dark white */
+.color-primary-3 { color: #116466 } /* blue sapphire */
+.color-primary-4 { color: #D9B08C } /* peach-orange */
+.color-primary-5 { color: #FFFFFF } /* white */
+.color-primary-6 { color: #000000 } /* black */
+.color-primary-7 { color: #FFCB9A } /* light peach-orange */
+.color-primary-8 { color: #D1E8E2 } /* light blue green */
+.color-primary-9 { color: #D9B08C } /* dark grey peach-orange */
+
 
 /* ==========================================================================
    Fonts Used
    ========================================================================== */
 
 @font-face{
-    font-family: 'Star Wars';
-    src: url('./fonts/Death_Star.otf') format('opentype');
+    font-family: 'Barlow';
+    src: url('./fonts/Barlow/Barlow-Regular.ttf') format('truetype');
 }
 
 @font-face{
-    font-family: 'Tron';
-    src: url('./fonts/Tr2n.ttf') format('truetype');
+    font-family: 'Barlow Thin';
+    src: url('./fonts/Barlow/Barlow-Thin.ttf') format('truetype');
 }
 
 @font-face{
-    font-family: 'Blade Runner';
-    src: url('./fonts/BLADRMF_.ttf') format('truetype');
+    font-family: 'Barlow Thin Italic';
+    src: url('./fonts/Barlow/Barlow-Thin.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Barlow Medium';
+    src: url('./fonts/Barlow/Barlow-Medium.ttf') format('truetype');
+}
+
+
+@font-face{
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto/Roboto-Thin.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Roboto Thin Italic';
+    src: url('./fonts/Roboto/Roboto-ThinItalic.ttf') format('truetype');
 }
 
 /* ==========================================================================
@@ -38,34 +59,26 @@
 /* Body of all the content in the page */
 
 body{
-    /*background-image: url(imgs/Interestelar.jpg);*/
-    background-color: #011431; /* color-primary-1*/
+    background-color: #2C3539; /* color-primary-1*/
 	font-size: 100%;
     
     margin: 0 auto; /* IMPORTANT --> these two things to make it centered and static */
     width:  1260px;
 }
 
-/* Solves the special characters not being recognized */
-
-@charset "utf-8";
-
 /* Anchor to go up to the front of the page */
 
 .to_top{
-  display: scroll;
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
-  width: 45;
+  width: 45px;
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
-  outline: none; /* Remove outline */
   background: transparent;
-  content: url("https://sites.google.com/site/dimensioncifi/home/ARRIBcopia.png");
   padding: 15px; /* Some padding */
   border-radius: 30px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  font-size: 80px; /* Increase font size */
 }
 
 /* 
@@ -77,7 +90,7 @@ body{
 
 nav {
   font-size: 20px;
-  font-family: 'Tron';
+  font-family: 'Barlow Medium', sans-serif;
     
   padding-top: 19px;
   margin-top: 10px;
@@ -87,8 +100,6 @@ nav {
     
   text-align: center;
   text-transform: uppercase;
-    
-  background-color: #3F3F8C; /* .color-primary-2 */
 }
 
 /* Highlights the links to the different sections when the mouse arrow is over it (Sinopsis, Necesidades, ...)*/
@@ -96,13 +107,13 @@ nav {
 #top a:link, #top a:visited  {
     padding: 14px;
     text-align: center;
-    color: #F9F9FF;
+    color: #F9F9FF; /* color-primary-2 */
     text-decoration: none;
     display: inline-block;
 }
 
 #top a:hover, #top.a:active {
-    background-color: #000000; /* .color-primary-3 */
+    background-color: #116466; /* .color-primary-3 */
 }
 
 /* 
@@ -114,28 +125,38 @@ nav {
 
 #Sinopsis , #Necesidades , #Tecnologias, #Impacto, #Referencias{
     padding-bottom: 20px;
-    margin-bottom: 20px;
-    
-    background-color: #BDBDE0; /* .color-primary-4 */
+    font-family: 'Roboto', sans-serif;
+    background-color: #116466; 
+    color: #D9B08C; /* .color-primary-4 */
 }
 
 /* Titles of the different areas */
 
 .section_title{
-    text-align: left;
-    padding-left: 130px;
-    padding-top: 80px;
-    background-color: #000000; 
-    font-family: 'Blade Runner';
-    font-size: 40px;
-    color: #0363FA; /* .color-primary-6 */
+    margin-bottom: 30px;
+    text-align: center;
+    padding-left: 30px;
+    padding-top: 20px;
+    background-color: #2C3539; 
+    font-family: 'Barlow Thin';
+    font-size: 30px;
+    
+    color: #D9B08C; 
     height: 70px;
 }
 
-#Sinopsis_Title, #Necesidades_Title, #Impacto_Title, #Tecnologias_Title{
-    background-image: url(imgs/banner2.jpg);
-    height: 150px;
-    padding-top: 80px;
+#Sinopsis_Title, #Necesidades_Title, #Impacto_Title, #Tecnologias_Title, Referencias_Title{
+    height: 60px;
+    padding-top: 10px;
+}
+
+.section_text, .subsection_text{
+    color: #FFFFFF; /* color-primary-5 */
+    padding-left: 20px;
+    margin-left: 20px;
+    
+    padding-right: 20px;
+    margin-right: 20px;
 }
 
 /* 
@@ -171,8 +192,8 @@ nav {
 /* Line that separates each gadget description */
 
 .separador{
-    color: #000000;
-    width: 1260px;
+    color: #000000; /* color-primary-6 */
+    width: 1060px;
     margin-top: 50px;
     overflow: visible;
     clear: both;
@@ -181,6 +202,8 @@ nav {
 /* Main title of the subarea (Dispositivo (Interfaz/tecnología))*/
 
 .need_title_main{
+    color: #FFCB9A; /* color-primary-7 */
+    font-weight: 900;
     grid-column: 1 / 2;
     grid-row: 1;
 }
@@ -188,9 +211,9 @@ nav {
 /* Main title of every subarea (Gadget) */
 
 .need_value_main{
-    font-family: 'Blade Runner';
+    font-family: 'Roboto Thin Italic';
     text-decoration: underline;
-    color: #FF0000; /* .color-primary-5 */
+    color: #D1E8E2; /* .color-primary-8 */
     grid-column: 1 / 1;
     grid-row: 2;
 }
@@ -198,7 +221,7 @@ nav {
 /* 'Primera Aparición' subtitle */
 
 #Title1_1, #Title2_1, #Title3_1, #Title4_1, #Title5_1, #Title6_1, #Title7_1{
-    color: #000000;
+    color: #D9B08C; /* .color-primary-9 */
     grid-column: 1 / 1;
     grid-row: 3;
 }
@@ -221,7 +244,7 @@ nav {
 }
 
 #Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2{
-    color: #000000;
+    color: #D9B08C;
 }
 
 /* Parameters of the videos and the image */
@@ -229,7 +252,7 @@ nav {
 .media{
     grid-column: 2;
     grid-row: 1 / 6;
-    padding: 20 20 20 110;
+    padding: 20px 20px 20px 110px;
     width: 500px;
     height: 300px;
     float: right;
@@ -239,6 +262,10 @@ nav {
  =========================================================
  Tecnologias Area
  ========================================================= */
+
+.link_Technology{
+    color: yellow;
+}
 
 .subsection_title {
     padding-left: 10px;
@@ -251,17 +278,12 @@ nav {
     margin-right: 10px;
 }
 
-.section_text, .subsection_text{
-    color: white;
-    padding-left: 20px;
-    margin-left: 20px;
-    
-    padding-right: 20px;
-    margin-right: 20px;
-}
+/* 
+ =========================================================
+ Referencias Area
+ ========================================================= */
 
-#Referencias .section_title{
-    padding-bottom: 10px;
-    padding-top: 40px;
+.link a{
+    color: azure;
 }
 
