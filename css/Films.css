@@ -12,6 +12,9 @@
 .color-primary-4 { color: #FFFFFF } /* white */
 .color-primary-5 { color: #000000 } /* black */
 .color-primary-6 { color: #FFF645 } /* light yellow */
+.color-primary-7 { color: #0000FF } /* blue */
+.color-primary-8 { color: #0B6623 } /* green forest */
+.color-primary-9 { color: #551a8b } /* purple */
 
 /* ==========================================================================
    Fonts Used
@@ -53,15 +56,16 @@ body{
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
+  width: 25px;
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
+  background: transparent;
   padding: 15px; /* Some padding */
   border-radius: 30px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  font-size: 20px; /* Increase font size */
+  color: white;
+  background-color: grey;
 }
 
 .to_top:hover {
@@ -95,6 +99,8 @@ nav {
     text-decoration: none;
     display: inline-block;
 }
+
+/* Settings of the header when any sections has been visited */
 
 #top a:hover, #top.a:active {
     background-color: #D6CF40; /* .color-primary-3 */
@@ -224,6 +230,8 @@ nav {
  Tecnologias Area
  ========================================================= */
 
+/* Subsection titles underlined */
+
 .subsection_title {
     padding-left: 10px;
     margin-left: 10px;
@@ -233,10 +241,75 @@ nav {
     margin-right: 10px;
 }
 
+/* Text/Content of the subsections */
+
 .section_text, .subsection_text{
     padding-left: 20px;
     margin-left: 20px;
     padding-right: 20px;
     margin-right: 20px;
+}
+
+/* 
+ =========================================================
+ Referencias Area
+ ========================================================= */
+
+/* Content of the total area */
+
+.referencias{
+  margin-left: 60px;
+}
+
+/* References link description titles */
+
+.autor, .titulo{
+  font-style: italic;
+}
+
+/* Format of the 3 different links */
+
+#ref1 .link {
+  margin-left: 80px; 
+}
+
+#ref2 .link {
+  margin-left: 57px; 
+}
+
+#ref3 .link {
+  margin-left: 42px; 
+}
+
+/* Format of the 'last visited' text (ultima visita) */
+
+#ref1 .visita {
+  margin-left: 130px; 
+}
+
+#ref2 .visita {
+  margin-left: 57px; 
+}
+
+#ref3 .visita {
+  margin-left: 212px; 
+}
+
+/* Default settings for links in this area */
+
+.link a{
+    color: #0000FF; /* color-primary-7 */
+}
+
+/* Default settings for links in this area when mouse is over them */
+
+.link a:hover{
+    color: #0B6623; /* color-primary-8 */
+}
+
+/* Default settings for links in this area after they are clicked */
+
+.link a:visited{
+    color: #551a8b; /* color-primary-9 */
 }
 

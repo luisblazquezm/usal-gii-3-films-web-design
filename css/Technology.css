@@ -15,6 +15,9 @@
 .color-primary-7 { color: #FFCB9A } /* light peach-orange */
 .color-primary-8 { color: #D1E8E2 } /* light blue green */
 .color-primary-9 { color: #D9B08C } /* dark grey peach-orange */
+.color-primary-10 { color: #007FFF } /* azure */
+.color-primary-11 { color: #BFFF00 } /* lime */
+.color-primary-12 { color: #551a8b } /* purple */
 
 
 /* ==========================================================================
@@ -72,13 +75,16 @@ body{
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
-  width: 45px;
+  width: 25px;
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
+  outline: none; /* Remove outline */
   background: transparent;
   padding: 15px; /* Some padding */
   border-radius: 30px; /* Rounded corners */
-  font-size: 80px; /* Increase font size */
+  font-size: 20px; /* Increase font size */
+  color: white;
+  background-color: grey;
 }
 
 /* 
@@ -111,6 +117,8 @@ nav {
     text-decoration: none;
     display: inline-block;
 }
+
+/* Settings of the header when any sections has been visited */
 
 #top a:hover, #top.a:active {
     background-color: #116466; /* .color-primary-3 */
@@ -145,7 +153,7 @@ nav {
     height: 70px;
 }
 
-#Sinopsis_Title, #Necesidades_Title, #Impacto_Title, #Tecnologias_Title, Referencias_Title{
+#Sinopsis_Title, #Necesidades_Title, #Impacto_Title, #Tecnologias_Title, #Referencias_Title{
     height: 60px;
     padding-top: 10px;
 }
@@ -263,9 +271,13 @@ nav {
  Tecnologias Area
  ========================================================= */
 
+/* Numbers of the reference links (1,2,3) */
+
 .link_Technology{
     color: yellow;
 }
+
+/* Subsection titles underlined */
 
 .subsection_title {
     padding-left: 10px;
@@ -283,7 +295,62 @@ nav {
  Referencias Area
  ========================================================= */
 
+/* Content of the total area */
+
+.referencias{
+  margin-left: 60px;
+}
+
+/* References link description titles */
+
+.autor, .titulo{
+  font-style: italic;
+  color: #FFFFFF;
+}
+
+/* Format of the 3 different links */
+
+#ref1 .link {
+  margin-left: 80px; 
+}
+
+#ref2 .link {
+  margin-left: 60px; 
+}
+
+#ref3 .link {
+  margin-left: 40px; 
+}
+
+/* Format of the 'last visited' text (ultima visita) */
+
+#ref1 .visita {
+  margin-left: 130px; 
+}
+
+#ref2 .visita {
+  margin-left: 60px; 
+}
+
+#ref3 .visita {
+  margin-left: 207px; 
+}
+
+/* Default settings for links in this area */
+
 .link a{
-    color: azure;
+    color: #007FFF;
+}
+
+/* Default settings for links in this area when mouse is over them */
+
+.link a:hover{
+    color: #BFFF00;
+}
+
+/* Default settings for links in this area after they are clicked */
+
+.link a:visited{
+    color: #551a8b;
 }
 
