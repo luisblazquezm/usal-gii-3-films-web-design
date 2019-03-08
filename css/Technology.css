@@ -108,15 +108,14 @@ nav {
   text-transform: uppercase;
 }
 
-/* Button 3D look. The button is outside the containter but when it is clicked it goes down*/
-
-nav > a{
-    background-color: #6fba26;
-	padding: 10px;
-	position: relative;
-	font-size: 20px;
-	text-decoration: none;
-	color:#FFFFFF;
+nav > a {
+	background-color:#6fba26;
+	padding:10px;
+	position:relative;
+	font-family: 'Open Sans', sans-serif;
+	font-size:12px;
+	text-decoration:none;
+	color:#fff;
 	background-image: linear-gradient(bottom, rgb(100,170,30) 0%, rgb(129,212,51) 100%);
 	box-shadow: inset 0px 1px 0px #b2f17f, 0px 6px 0px #3d6f0d;
 	border-radius: 5px;
@@ -132,16 +131,16 @@ nav > a:active {
 }
 
 nav > a::before {
-	background-color: #072239;
-	content: "";
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	padding-left: 2px;
-	padding-right: 2px;
-	padding-bottom: 4px;
-	left: -2px;
+	background-color:#072239;
+	content:"";
+	display:block;
+	position:absolute;
+	width:100%;
+	height:100%;
+	padding-left:2px;
+	padding-right:2px;
+	padding-bottom:4px;
+	left:-2px;
 	top:5px;
 	z-index:-1;
 	border-radius: 6px;
@@ -151,6 +150,8 @@ nav > a::before {
 nav > a:active::before {
 	top:-2px;
 }
+
+
 
 /* Highlights the links to the different sections when the mouse arrow is over it (Sinopsis, Necesidades, ...)*/
 
