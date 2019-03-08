@@ -21,11 +21,24 @@
    ========================================================================== */
 
 @font-face {
-  font-family: 'Oxygen';
+  font-family: 'Oxygen Light';
   font-style: normal;
   font-weight: 400;
-  src: local('Oxygen Regular'), local('Oxygen-Regular'), url(https://fonts.gstatic.com/s/oxygen/v8/2sDfZG1Wl4LcnbuKgE0mRUe0A4Uc.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url('./fonts/Films/Oxygen/Oxygen-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Oxygen Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/Films/Oxygen/Oxygen-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Century-Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/Films/Century-Gothic.ttf') format('truetype');
 }
 
 @font-face {
@@ -44,7 +57,7 @@
 
 body{
 	background-color: #EEEEEE; /* color-primary-1 */
-	font-family: 'Oxygen';
+	font-family: 'Oxygen Light';
 	font-size: 100%;
     margin: 0 auto; /* IMPORTANT --> these two things to make it centered and static */
     width:  1260px;
@@ -80,6 +93,7 @@ body{
 /* Header of the webpage */
 
 nav {
+  font-family: 'Oxygen Bold';
   font-size: 20px;
   padding-top: 19px;
   margin-top: 10px;
@@ -123,6 +137,7 @@ nav {
 /* Titles of the different areas */
 
 .section_title{
+    font-family: ''Century-Gothic'';
     padding-top: 20px;
     text-align: center;
     background-color: #000000; /* .color-primary-5 */
@@ -180,6 +195,8 @@ nav {
 
 .need_value_main{
     font-family: 'Oswald';
+    font-style: italic;
+    font-size: 30px;
     text-decoration: underline;
     grid-column: 1 / 1;
     grid-row: 2;
@@ -189,6 +206,7 @@ nav {
 
 #Title1_1, #Title2_1, #Title3_1, #Title4_1, #Title5_1, #Title6_1, #Title7_1{
     color: black;
+    padding-top: 17px;
     grid-column: 1 / 1;
     grid-row: 3;
 }
@@ -197,7 +215,7 @@ nav {
 
 #Value1, #Value2, #Value3, #Value4, #Value5, #Value6, #Value7{
     color: darkgrey;
-    margin-top: 21px;
+    margin-top: 38px;
     grid-column: 1 / 1;
     grid-row: 3;
     text-align: center;
@@ -211,6 +229,7 @@ nav {
 }
 
 #Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2{
+    padding-top: 17px;
     color: #000000;
 }
 
@@ -292,7 +311,7 @@ nav {
 }
 
 #ref3 .visita {
-  margin-left: 212px; 
+  margin-left: 207px; 
 }
 
 /* Default settings for links in this area */

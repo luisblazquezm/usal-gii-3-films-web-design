@@ -18,6 +18,7 @@
 .color-primary-10 { color: #007FFF } /* azure */
 .color-primary-11 { color: #BFFF00 } /* lime */
 .color-primary-12 { color: #551a8b } /* purple */
+.color-primary-13 { color: #6fba26 } /* lime */
 
 
 /* ==========================================================================
@@ -97,23 +98,19 @@ body{
 nav {
   font-size: 20px;
   font-family: 'Barlow Medium', sans-serif;
-    
+  padding-left: 20px;
   padding-top: 19px;
   margin-top: 10px;
-    
   padding-bottom: 10px;
   margin-bottom: 10px;
-    
   text-align: center;
   text-transform: uppercase;
 }
 
 nav > a {
-	background-color:#6fba26;
-	padding:10px;
+	background-color:#6fba26; /* .color-primary-13 */
 	position:relative;
-	font-family: 'Open Sans', sans-serif;
-	font-size:12px;
+	font-size:20px;
 	text-decoration:none;
 	color:#fff;
 	background-image: linear-gradient(bottom, rgb(100,170,30) 0%, rgb(129,212,51) 100%);
@@ -254,46 +251,84 @@ nav > a:active::before {
 
 /* Main title of the subarea (Dispositivo (Interfaz/tecnología))*/
 
-.need_title_main{
+#Dipositivo1, #Dispositivo3, #Dispositivo5, #Dispositivo7{
     color: #FFCB9A; /* color-primary-7 */
     font-weight: 900;
     grid-column: 1 / 2;
     grid-row: 1;
 }
 
+#Dispositivo2, #Dispositivo4, #Dispositivo6{
+    color: #FFCB9A; /* color-primary-7 */
+    font-weight: 900;
+    grid-column: 2;
+    grid-row: 1;
+}
+
 /* Main title of every subarea (Gadget) */
 
-.need_value_main{
+#Gadget1, #Gadget3, #Gadget5, #Gadget7{
     font-family: 'Roboto Thin Italic';
+    font-size: 30px;
     text-decoration: underline;
     color: #D1E8E2; /* .color-primary-8 */
     grid-column: 1 / 1;
     grid-row: 2;
 }
 
+#Gadget2, #Gadget4, #Gadget6{
+    font-family: 'Roboto Thin Italic';
+    font-size: 30px;
+    text-decoration: underline;
+    color: #D1E8E2; /* .color-primary-8 */
+    grid-column: 2;
+    grid-row: 2;
+}
+
 /* 'Primera Aparición' subtitle */
 
-#Title1_1, #Title2_1, #Title3_1, #Title4_1, #Title5_1, #Title6_1, #Title7_1{
+#Title1_1, #Title3_1, #Title5_1, #Title7_1{
     color: #D9B08C; /* .color-primary-9 */
+    padding-top: 10px;
     grid-column: 1 / 1;
+    grid-row: 3;
+}
+
+#Title2_1, #Title4_1, #Title6_1{
+    color: #D9B08C; /* .color-primary-9 */
+    padding-top: 10px;
+    grid-column: 2;
     grid-row: 3;
 }
 
 /* Value of the first appearance*/
 
-#Value1, #Value2, #Value3, #Value4, #Value5, #Value6, #Value7{
+#Value1, #Value3, #Value5, #Value7{
     color: white;
-    margin-top: 21px;
+    margin-top: 31px;
     grid-column: 1 / 1;
+    grid-row: 3;
+    text-align: center;
+}
+
+#Value2, #Value4, #Value6{
+    color: white;
+    margin-top: 31px;
+    grid-column: 2;
     grid-row: 3;
     text-align: center;
 }
 
 /* Subtitles and description of every gadget first appearance */
 
-#Title1_2, #Text1, #Title2_2, #Text2, #Title3_2, #Text3, #Title4_2, #Text4, #Title5_2, #Text5, #Title6_2, #Text6, #Title7_2, #Text7{
+#Title1_2, #Text1, #Title3_2, #Text3, #Title5_2, #Text5, #Title7_2, #Text7{
     color: white;
     grid-column: 1 / 1;
+}
+
+#Title2_2, #Text2, #Title4_2, #Text4, #Title6_2, #Text6{
+    color: white;
+    grid-column: 2;
 }
 
 #Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2{
@@ -305,10 +340,15 @@ nav > a:active::before {
 .media{
     grid-column: 2;
     grid-row: 1 / 6;
-    padding: 20px 20px 20px 110px;
+    padding: 20px 20px 20px 10px;
     width: 500px;
     height: 300px;
     float: right;
+}
+
+#media2, #media4, #media6{
+    grid-row: 1 / 6;
+    grid-column: 1;
 }
 
 /* 
