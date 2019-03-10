@@ -105,6 +105,18 @@ nav {
   position: static;
 }
 
+nav > a {
+  color: black;
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow:hidden;
+  transition: .3s;
+}
+
 /* Highlights the links to the different sections when the mouse arrow is over it (Sinopsis, Necesidades, ...)*/
 
 #top a:link, #top a:visited  {
@@ -116,8 +128,21 @@ nav {
 
 /* Settings of the header when any sections has been visited */
 
-#top a:hover, #top.a:active {
-    background-color: #D6CF40; /* .color-primary-3 */
+#top a::after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #FFF645;
+  }
+
+#top a:hover::after {
+    cursor:point;
+    width: 100%;
+    left: 0;
 }
 
 /* 
