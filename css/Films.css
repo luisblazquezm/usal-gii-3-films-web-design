@@ -13,7 +13,7 @@
 .color-primary-5 { color: #000000 } /* black */
 .color-primary-6 { color: #FFF645 } /* light yellow */
 .color-primary-7 { color: #0000FF } /* blue */
-.color-primary-8 { color: #0B6623 } /* green forest */
+.color-primary-8 { color: #FFA500 } /* green forest */
 .color-primary-9 { color: #551a8b } /* purple */
 
 /* ==========================================================================
@@ -348,7 +348,7 @@ nav > a {
 /* Default settings for links in this area when mouse is over them */
 
 .link a:hover{
-    color: #0B6623; /* color-primary-8 */
+    color: #FFA500; /* color-primary-8 */
 }
 
 /* Default settings for links in this area after they are clicked */
