@@ -186,16 +186,18 @@ nav > a:hover {
 .need_title_main{
     grid-column: 1 / 2;
     grid-row: 1;
+    width: 20px;
 }
 
 /* Main title of every subarea (Gadget) */
 
 .need_value_main{
-    font-family: 'Blade Runner';
-    text-decoration: underline;
-    color: #4E78A0; /* .color-primary-5 */
+    font-size: 30px;
+    color: white;
     grid-column: 1 / 1;
-    grid-row: 2;
+    grid-row: 1;
+    padding-left: 150px;
+    text-align: center;
 }
 
 /* 'Primera Aparición' subtitle */
@@ -206,25 +208,41 @@ nav > a:hover {
     grid-row: 3;
 }
 
-/* Value of the first appearance*/
+/* Value of the first appearance */
 
 #Value1, #Value2, #Value3, #Value4, #Value5, #Value6, #Value7{
     color: white;
     margin-top: 21px;
     grid-column: 1 / 1;
     grid-row: 3;
+    padding-left: 90px;
     text-align: center;
 }
 
 /* Subtitles and description of every gadget first appearance */
 
-#Title1_2, #Text1, #Title2_2, #Text2, #Title3_2, #Text3, #Title4_2, #Text4, #Title5_2, #Text5, #Title6_2, #Text6, #Title7_2, #Text7{
+#Title1_2, #Gadget1, #Text1, #Title2_2, #Text2, #Title3_2, #Text3, #Title4_2, #Text4, #Title5_2, #Text5, #Title6_2, #Text6, #Title7_2, #Text7{
     color: white;
-    grid-column: 1 / 1;
+}
+
+/* Dispositivo - Primera Aparición - Necesidad */
+#Title1_1, #Title2_1, #Title3_1, #Title4_1, #Title5_1, #Title6_1, #Title7_1 , 
+.need_title_main ,
+#Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2 {
+    font-family: 'Blade Runner';
+    font-style: italic;
+    text-decoration: underline;
 }
 
 #Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2{
     color: #000000;
+    grid-column: 1 / 1;
+    grid-row: 4;
+}
+
+#Text1, #Text2, #Text3, #Text4, #Text5, #Text6, #Text7 {
+    grid-column: 1 / 1;
+    grid-row: 5;
 }
 
 /* Parameters of the videos and the image */

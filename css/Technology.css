@@ -20,6 +20,23 @@
 .color-primary-12 { color: #551a8b } /* purple */
 .color-primary-13 { color: #6fba26 } /* lime */
 
+/* For mobile phones: */
+[class*="section"] [class*="need"]{
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .section {width: 8.33%;}
+  .need {width: 16.66%;}
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .section {width: 100.33%;}
+  .need {width: 76.66%;}
+}
+
 
 /* ==========================================================================
    Fonts Used
@@ -226,59 +243,58 @@ nav > a:hover {
 
 /* Main title of the subarea (Dispositivo (Interfaz/tecnología))*/
 
-#Dipositivo1, #Dispositivo3, #Dispositivo5, #Dispositivo7{
+#Dispositivo1, #Dispositivo2, #Dispositivo3, #Dispositivo4, #Dispositivo5, #Dispositivo6, #Dispositivo7 { /* Appearance */
     color: #FFCB9A; /* color-primary-7 */
     font-weight: 900;
-    grid-column: 1 / 2;
     grid-row: 1;
+    width: 20px;
 }
 
-#Dispositivo2, #Dispositivo4, #Dispositivo6{
-    color: #FFCB9A; /* color-primary-7 */
-    font-weight: 900;
+#Dispositivo1, #Dispositivo3, #Dispositivo5, #Dispositivo7{ /* Position: LEFT*/
+    grid-column: 1 / 2;
+}
+
+#Dispositivo2, #Dispositivo4, #Dispositivo6{ /* Position: RIGHT */
     grid-column: 2;
-    grid-row: 1;
 }
 
 /* Main title of every subarea (Gadget) */
 
-#Gadget1, #Gadget3, #Gadget5, #Gadget7{
+#Gadget1, #Gadget2, #Gadget3, #Gadget4, #Gadget5, #Gadget6, #Gadget7 { /* Appearance */
     font-family: 'Roboto Thin Italic';
     font-size: 30px;
-    text-decoration: underline;
     color: #D1E8E2; /* .color-primary-8 */
-    grid-column: 1 / 1;
-    grid-row: 2;
+    grid-row: 1;
+    padding-left: 260px;
 }
 
-#Gadget2, #Gadget4, #Gadget6{
-    font-family: 'Roboto Thin Italic';
-    font-size: 30px;
-    text-decoration: underline;
-    color: #D1E8E2; /* .color-primary-8 */
+#Gadget1, #Gadget3, #Gadget5, #Gadget7{ /* Position: LEFT */
+    grid-column: 1 / 1;
+}
+
+#Gadget2, #Gadget4, #Gadget6 { /* Position: RIGHT */
     grid-column: 2;
-    grid-row: 2;
 }
 
 /* 'Primera Aparición' subtitle */
 
-#Title1_1, #Title3_1, #Title5_1, #Title7_1{
+#Title1_1, #Title2_1, #Title3_1, #Title4_1, #Title5_1, #Title6_1, #Title7_1 { /* Appearance */
     color: #D9B08C; /* .color-primary-9 */
     padding-top: 10px;
-    grid-column: 1 / 1;
     grid-row: 3;
 }
 
-#Title2_1, #Title4_1, #Title6_1{
-    color: #D9B08C; /* .color-primary-9 */
-    padding-top: 10px;
+#Title1_1, #Title3_1, #Title5_1, #Title7_1 { /* Position: LEFT */
+    grid-column: 1 / 1;
+}
+
+#Title2_1, #Title4_1, #Title6_1 { /* Position: RIGHT */
     grid-column: 2;
-    grid-row: 3;
 }
 
 /* Value of the first appearance*/
 
-#Value1, #Value3, #Value5, #Value7{
+#Value1, #Value3, #Value5, #Value7{ /* LEFT */
     color: white;
     margin-top: 31px;
     grid-column: 1 / 1;
@@ -286,7 +302,7 @@ nav > a:hover {
     text-align: center;
 }
 
-#Value2, #Value4, #Value6{
+#Value2, #Value4, #Value6{ /* RIGHT */
     color: white;
     margin-top: 31px;
     grid-column: 2;
@@ -296,18 +312,54 @@ nav > a:hover {
 
 /* Subtitles and description of every gadget first appearance */
 
+/* ======== The ones on the LEFT ========  */
+
 #Title1_2, #Text1, #Title3_2, #Text3, #Title5_2, #Text5, #Title7_2, #Text7{
     color: white;
     grid-column: 1 / 1;
 }
+
+#Title1_2, #Title3_2, #Title5_2, #Title7_2 {
+    grid-column: 1 / 1;
+    grid-row: 4;
+}
+
+#Text1, #Text3, #Text5, #Text7{
+    grid-column: 1 / 1;
+    grid-row: 5;
+}
+
+/* ======== The ones on the RIGHT ========  */
 
 #Title2_2, #Text2, #Title4_2, #Text4, #Title6_2, #Text6{
     color: white;
     grid-column: 2;
 }
 
+#Title2_2, #Title4_2, #Title6_2 {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+#Text2, #Text4, #Text6{
+    grid-column: 2;
+    grid-row: 5;
+    width: 90%;
+}
+
+/* Color Titles 'Necesidad' */
+
 #Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2{
     color: #D9B08C;
+}
+
+/* Dispositivo - Primera Aparición - Necesidad */
+#Title1_1, #Title2_1, #Title3_1, #Title4_1, #Title5_1, #Title6_1, #Title7_1 , 
+.need_title_main ,
+#Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2 {
+    font-family: 'Roboto Thin Italic';
+    font-style: italic;
+    text-decoration: underline;
 }
 
 /* Parameters of the videos and the image */
