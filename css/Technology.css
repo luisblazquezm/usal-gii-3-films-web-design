@@ -21,7 +21,7 @@
 .color-primary-13 { color: #6fba26 } /* lime */
 
 /* For mobile phones: */
-@media (min-width: 320px) and (max-width: 686px){
+@media (max-width: 686px){
   [id*="Text"]{
       max-width: 500px;
       max-height: 80px;
