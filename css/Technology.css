@@ -1,47 +1,6 @@
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
 
 /* ==========================================================================
-   Colors Used
-   ========================================================================== */
-
-/* As hex codes */
-
-.color-primary-1 { color: #2C3539 } /* gunmetal gray */
-.color-primary-2 { color: #F9F9FF } /* dark white */
-.color-primary-3 { color: #116466 } /* blue sapphire */
-.color-primary-4 { color: #D9B08C } /* peach-orange */
-.color-primary-5 { color: #FFFFFF } /* white */
-.color-primary-6 { color: #000000 } /* black */
-.color-primary-7 { color: #FFCB9A } /* light peach-orange */
-.color-primary-8 { color: #D1E8E2 } /* light blue green */
-.color-primary-9 { color: #D9B08C } /* dark grey peach-orange */
-.color-primary-10 { color: #007FFF } /* azure */
-.color-primary-11 { color: #BFFF00 } /* lime */
-.color-primary-12 { color: #551a8b } /* purple */
-.color-primary-13 { color: #6fba26 } /* lime */
-
-/* For mobile phones: */
-@media (max-width: 686px){
-  [id*="Text"]{
-      width: 500px;
-      height: 80px;
-   }
-}
-
-  /* For tablets: */
-@media only screen and (min-width: 600px) {
-  .section {width: 8.33%;}
-  .need {width: 16.66%;}
-}
-
-  /* For desktop: */
-@media only screen and (min-width: 768px) {
-  .section {width: 100.33%;}
-  .need {width: 76.66%;}
-}
-
-
-/* ==========================================================================
    Fonts Used
    ========================================================================== */
 
@@ -76,6 +35,60 @@
     src: url('./fonts/Technology/Roboto/Roboto-ThinItalic.ttf') format('truetype');
 }
 
+
+/* ==========================================================================
+   Colors Used
+   ========================================================================== */
+
+/* Global variables used */
+
+:root
+{
+    --backgroundColor  : #2C3539;   /* gunmetal gray */
+    --headerFontColor  : #F9F9FF;   /* dark white */
+    --headerHoverColor : #116466;   /* blue sapphire */
+    --mainTitleColor   : #D9B08C;   /* peach-orange */
+    --textColor        : #FFFFFF;   /* white */
+    --separatorColor   : #000000;   /* black */
+    --titleColor       : #FFCB9A;   /* light peach-orange */
+    --subtitlesColor   : #D1E8E2;   /* light blue green */
+    --contentSubtColor : #D9B08C;   /* dark grey peach-orange */
+    --linkColor        : #007FFF;   /* azure */
+    --linkHoverColor   : #BFFF00;   /* lime */
+    --linkVisitedColor : #551a8b;   /* purple */
+    --anchorBackgrColor: #7D7D7D;   /* grey*/
+    
+    --headerFont   : 'Barlow Medium';
+    --mainTitleFont: 'Roboto';
+    --textFont     : 'Barlow Thin';
+    --subtitlesFont: 'Roboto Thin Italic';
+    
+}
+
+
+/* For mobile phones: */
+@media (min-width: 320px) and (max-width: 686px){
+  [id*="Text"]{
+      width: 500px;
+      height: 80px;
+   }
+}
+
+  /* For tablets: */
+@media only screen and (min-width: 600px) {
+  .section {width: 8.33%;}
+  .need {width: 16.66%;}
+}
+
+  /* For desktop: */
+@media only screen and (min-width: 768px) {
+  .section {width: 100.33%;}
+  .need {width: 76.66%;}
+}
+
+
+
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -83,9 +96,8 @@
 /* Body of all the content in the page */
 
 body{
-    background-color: #2C3539; /* color-primary-1*/
+    background-color: var(--backgroundColor); 
 	font-size: 100%;
-    
     margin: 0 auto; /* IMPORTANT --> these two things to make it centered and static */
     width:  1260px;
 }
@@ -105,7 +117,7 @@ body{
   border-radius: 30px; /* Rounded corners */
   font-size: 20px; /* Increase font size */
   color: white;
-  background-color: grey;
+  background-color: var(--anchorBackgrColor);
 }
 
 /* 
@@ -117,7 +129,7 @@ body{
 
 nav {
   font-size: 20px;
-  font-family: 'Barlow Medium', sans-serif;
+  font-family: var(--headerFont), sans-serif;
   padding-left: 20px;
   padding-top: 19px;
   margin-top: 10px;
@@ -150,7 +162,7 @@ nav > a:hover {
 #top a:link, #top a:visited  {
     padding: 14px;
     text-align: center;
-    color: #F9F9FF; /* color-primary-2 */
+    color: var(--headerFontColor); 
     text-decoration: none;
     display: inline-block;
 }
@@ -158,7 +170,7 @@ nav > a:hover {
 /* Settings of the header when any sections has been visited */
 
 #top a:hover, #top.a:active {
-    background-color: #116466; /* .color-primary-3 */
+    background-color: var(--headerHoverColor); 
 }
 
 /* 
@@ -170,9 +182,9 @@ nav > a:hover {
 
 #Sinopsis , #Necesidades , #Tecnologias, #Impacto, #Referencias{
     padding-bottom: 20px;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--mainTitleFont), sans-serif;
     background-color: #116466; 
-    color: #D9B08C; /* .color-primary-4 */
+    color: var(--mainTitleColor);
 }
 
 /* Titles of the different areas */
@@ -183,9 +195,8 @@ nav > a:hover {
     padding-left: 30px;
     padding-top: 20px;
     background-color: #2C3539; 
-    font-family: 'Barlow Thin';
+    font-family: var(--textFont);
     font-size: 30px;
-    
     color: #D9B08C; 
     height: 70px;
 }
@@ -196,10 +207,9 @@ nav > a:hover {
 }
 
 .section_text, .subsection_text{
-    color: #FFFFFF; /* color-primary-5 */
+    color: var(--textColor);
     padding-left: 20px;
     margin-left: 20px;
-    
     padding-right: 20px;
     margin-right: 20px;
 }
@@ -214,13 +224,10 @@ nav > a:hover {
 .need{
   padding-top: 19px;
   margin-top: 10px;
-    
   padding-bottom: 10px;
-  margin-bottom: 10px;
-    
+  margin-bottom: 10px; 
   padding-left: 20px;
-  margin-left: 20px;
-    
+  margin-left: 20px; 
   padding-right: 20px;
   margin-right: 20px;
     
@@ -237,7 +244,7 @@ nav > a:hover {
 /* Line that separates each gadget description */
 
 .separador{
-    color: #000000; /* color-primary-6 */
+    color: var(--separatorColor); 
     width: 1060px;
     margin-top: 50px;
     overflow: visible;
@@ -247,7 +254,7 @@ nav > a:hover {
 /* Main title of the subarea (Dispositivo (Interfaz/tecnología))*/
 
 #Dispositivo1, #Dispositivo2, #Dispositivo3, #Dispositivo4, #Dispositivo5, #Dispositivo6, #Dispositivo7 { /* Appearance */
-    color: #FFCB9A; /* color-primary-7 */
+    color: var(--titleColor);
     font-weight: 900;
     grid-row: 1;
     width: 20px;
@@ -263,12 +270,13 @@ nav > a:hover {
 
 /* Main title of every subarea (Gadget) */
 
-#Gadget1, #Gadget2, #Gadget3, #Gadget4, #Gadget5, #Gadget6, #Gadget7 { /* Appearance */
-    font-family: 'Roboto Thin Italic';
+[id*="Gadget"] { /* Appearance */
+    font-family: var(--subtitlesFont);
     font-size: 30px;
-    color: #D1E8E2; /* .color-primary-8 */
+    color:  var(--subtitlesColor);
     grid-row: 1;
     padding-left: 260px;
+    width: 200px;
 }
 
 #Gadget1, #Gadget3, #Gadget5, #Gadget7{ /* Position: LEFT */
@@ -282,7 +290,7 @@ nav > a:hover {
 /* 'Primera Aparición' subtitle */
 
 #Title1_1, #Title2_1, #Title3_1, #Title4_1, #Title5_1, #Title6_1, #Title7_1 { /* Appearance */
-    color: #D9B08C; /* .color-primary-9 */
+    color: var(--contentSubtColor); 
     padding-top: 10px;
     grid-row: 3;
 }
@@ -296,6 +304,10 @@ nav > a:hover {
 }
 
 /* Value of the first appearance*/
+
+[id*="Value"] {
+    margin-left: 100px;
+}
 
 #Value1, #Value3, #Value5, #Value7{ /* LEFT */
     color: white;
@@ -332,6 +344,7 @@ nav > a:hover {
 #Text1, #Text3, #Text5, #Text7{
     grid-column: 1 / 1;
     grid-row: 5;
+    width: 90%;
 }
 
 /* ======== The ones on the RIGHT ========  */
@@ -355,14 +368,14 @@ nav > a:hover {
 /* Color Titles 'Necesidad' */
 
 #Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2{
-    color: #D9B08C;
+    color: var(--contentSubtColor); 
 }
 
 /* Dispositivo - Primera Aparición - Necesidad */
 #Title1_1, #Title2_1, #Title3_1, #Title4_1, #Title5_1, #Title6_1, #Title7_1 , 
 .need_title_main ,
 #Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2 {
-    font-family: 'Roboto Thin Italic';
+    font-family: var(--subtitlesFont);
     font-style: italic;
     text-decoration: underline;
 }
@@ -385,6 +398,8 @@ nav > a:hover {
 #media2, #media4, #media6{
     grid-row: 1 / 6;
     grid-column: 1;
+    margin-left: 20px;
+    margin-right: 80px;
 }
 
 /* 
@@ -403,10 +418,8 @@ nav > a:hover {
 .subsection_title {
     padding-left: 10px;
     margin-left: 10px;
-    
     font-style: italic;
     text-decoration: underline;
-    
     padding-right: 10px;
     margin-right: 10px;
 }
@@ -426,7 +439,7 @@ nav > a:hover {
 
 .autor, .titulo{
   font-style: italic;
-  color: #FFFFFF;
+  color: var(--textColor);
 }
 
 /* Format of the 3 different links */
@@ -460,18 +473,18 @@ nav > a:hover {
 /* Default settings for links in this area */
 
 .link a{
-    color: #007FFF;
+    color: var(--linkColor);
 }
 
 /* Default settings for links in this area when mouse is over them */
 
 .link a:hover{
-    color: #BFFF00;
+    color: var(--linkHoverColor);
 }
 
 /* Default settings for links in this area after they are clicked */
 
 .link a:visited{
-    color: #551a8b;
+    color: var(--linkVisitedColor);
 }
 

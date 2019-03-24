@@ -1,29 +1,7 @@
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/* ==========================================================================
-   Colors Used
-   ========================================================================== */
-
-/* As hex codes */
-
-.color-primary-1 { color: #011431 } /* dark intense blue */
-.color-primary-2 { color: #3F3F8C } /* light purple */
-.color-primary-3 { color: #000000 } /* black */
-.color-primary-4 { color: #BDBDE0 } /* smooth purple */
-.color-primary-5 { color: #4E78A0 } /* aquamarine */
-.color-primary-6 { color: #007FFF } /* azure */
-.color-primary-7 { color: #551a8b } /* purple */
-.color-primary-8 { color: #0DD }    /* ligth blue */
-.color-primary-9 { color: #F9F9FF } /* white */
-
 /* ==========================================================================
    Fonts Used
    ========================================================================== */
-
-@font-face{
-    font-family: 'Star Wars';
-    src: url('./fonts/Science_Fiction_Films/Death_Star.otf') format('opentype');
-}
 
 @font-face{
     font-family: 'Tron';
@@ -35,6 +13,44 @@
     src: url('./fonts/Science_Fiction_Films/BLADRMF_.ttf') format('truetype');
 }
 
+
+/* ==========================================================================
+   Colors Used
+   ========================================================================== */
+
+/* As hex codes */
+
+.color-primary-2 { color: #3F3F8C } /* light purple */
+
+/* ==========================================================================
+   Colors Used
+   ========================================================================== */
+
+/* Global variables used */
+
+:root
+{
+    --backgroundColor  : #011431;   /* dark intense blue */
+    --headerFontColor  : #F9F9FF;   /* dark white */
+    --headerHoverColor : #0DD;      /* ligth blue */
+    --mainTitleColor   : #0363FA;   /* dark blue */
+    --textBackgrColor  : #BDBDE0;   /* smooth purple */
+    --titleBackgrColor : #000000;   /* black */
+    --textColor        : #FFFFFF;   /* white */
+    --separatorColor   : #000000;   /* black */
+    --titleColor       : #000000;   /* black */
+    --subtitlesColor   : #000000;   /* black */
+    --linkColor        : #4E78A0;   /* aquamarine */
+    --linkHoverColor   : #007FFF;   /* azure */
+    --linkVisitedColor : #551a8b;   /* purple */
+    --anchorBackgrColor: #07FFFF;   /* luminious blue */
+    
+    --headerFont   : 'Tron';
+    --mainTitleFont: 'Blade Runner';
+    
+}
+
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -42,7 +58,7 @@
 /* Body of all the content in the page */
 
 body{
-    background-color: #011431; /* color-primary-1*/
+    background-color: var(--backgroundColor); 
 	font-size: 100%;
     margin: 0 auto; /* IMPORTANT --> these two things to make it centered and static */
     width:  1260px;
@@ -62,7 +78,7 @@ body{
   padding: 15px; /* Some padding */
   border-radius: 30px; /* Rounded corners */
   font-size: 20px; /* Increase font size */
-  background-color: 007FFF;
+  background-color: var(--anchorBackgrColor);
 }
 
 /* 
@@ -74,7 +90,7 @@ body{
 
 nav {
   font-size: 20px;
-  font-family: 'Tron';
+  font-family: var(--headerFont);
   padding-top: 19px;
   margin-top: 10px;
   padding-bottom: 10px;
@@ -89,7 +105,7 @@ nav {
 #top a:link, #top a:visited  {
     padding: 14px;
     text-align: center;
-    color: #F9F9FF; /* color-primary 9 */
+    color: var(--headerFontColor);
     text-decoration: none;
     display: inline-block;
 }
@@ -103,12 +119,12 @@ nav > a{
 	transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
 	margin: 20px;
 	box-shadow: inset 0 0 1em rgba(0,170,170,0.5), 0 0 1em rgba(0,170,170,0.5);
-	border: #0dd solid 2px;
+	border: var(--headerHoverColor) solid 2px;
  
 }
 
 nav > a:hover {
-    background-color: #0DD; /* color-primary 8 */
+    background-color: var(--headerHoverColor); /* color-primary 8 */
     box-shadow: inset 0 0 0 rgba(0,170,170,0.5), 0 0 1.5em rgba(0,170,170,0.7);
 }
 
@@ -122,7 +138,7 @@ nav > a:hover {
 #Sinopsis , #Necesidades , #Tecnologias, #Impacto, #Referencias{
     padding-bottom: 20px;
     margin-bottom: 20px;
-    background-color: #BDBDE0; /* .color-primary-4 */
+    background-color: var(--textBackgrColor); /* .color-primary-4 */
 }
 
 /* Titles of the different areas */
@@ -131,8 +147,8 @@ nav > a:hover {
     text-align: left;
     padding-left: 130px;
     padding-top: 80px;
-    background-color: #000000; 
-    font-family: 'Blade Runner';
+    background-color: var(--titleBackgrColor); 
+    font-family: var(--mainTitleFont);
     font-size: 40px;
     color: #0363FA; /* .color-primary-6 */
     height: 70px;
@@ -174,7 +190,7 @@ nav > a:hover {
 /* Line that separates each gadget description */
 
 .separador{
-    color: #000000;
+    color: var(--separatorColor);
     width: 1260px;
     margin-top: 50px;
     overflow: visible;
@@ -203,7 +219,7 @@ nav > a:hover {
 /* 'Primera Aparición' subtitle */
 
 #Title1_1, #Title2_1, #Title3_1, #Title4_1, #Title5_1, #Title6_1, #Title7_1{
-    color: #000000;
+    color: var(--titleColor);
     grid-column: 1 / 1;
     grid-row: 3;
 }
@@ -222,20 +238,20 @@ nav > a:hover {
 /* Subtitles and description of every gadget first appearance */
 
 #Title1_2, #Gadget1, #Text1, #Title2_2, #Text2, #Title3_2, #Text3, #Title4_2, #Text4, #Title5_2, #Text5, #Title6_2, #Text6, #Title7_2, #Text7{
-    color: white;
+    color: var(--textColor);
 }
 
 /* Dispositivo - Primera Aparición - Necesidad */
 #Title1_1, #Title2_1, #Title3_1, #Title4_1, #Title5_1, #Title6_1, #Title7_1 , 
 .need_title_main ,
 #Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2 {
-    font-family: 'Blade Runner';
+    font-family: var(--mainTitleFont);
     font-style: italic;
     text-decoration: underline;
 }
 
 #Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2{
-    color: #000000;
+    color: var(--subtitlesColor);
     grid-column: 1 / 1;
     grid-row: 4;
 }
@@ -304,7 +320,7 @@ nav > a:hover {
 
 .autor, .titulo{
   font-style: italic;
-  color: #FFFFFF;
+  color: var(--textColor);
 }
 
 /* Format of the 3 different links */
@@ -338,18 +354,18 @@ nav > a:hover {
 /* Default settings for links in this area */
 
 .link a{
-    color: #007FFF; /* color-primary-6 */
+    color: var(--linkColor);
 }
 
 /* Default settings for links in this area when mouse is over them */
 
 .link a:hover{
-    color: #4E78A0; 
+    color: var(--linkHoverColor); 
 }
 
 /* Default settings for links in this area after they are clicked */
 
 .link a:visited{
-    color: #551a8b; /* color-primary-7 */
+    color: var(--linkVisitedColor); 
 }
 

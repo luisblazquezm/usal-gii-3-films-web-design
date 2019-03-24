@@ -1,22 +1,6 @@
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
 
 /* ==========================================================================
-   Colors Used
-   ========================================================================== */
-
-/* As hex codes */
-
-.color-primary-1 { color: #EEEEEE } /* light gray */
-.color-primary-2 { color: #808080 } /* smooth grey */
-.color-primary-3 { color: #D6CF40 } /* dark yellow */
-.color-primary-4 { color: #FFFFFF } /* white */
-.color-primary-5 { color: #000000 } /* black */
-.color-primary-6 { color: #FFF645 } /* light yellow */
-.color-primary-7 { color: #0000FF } /* blue */
-.color-primary-8 { color: #FFA500 } /* green forest */
-.color-primary-9 { color: #551a8b } /* purple */
-
-/* ==========================================================================
    Fonts Used
    ========================================================================== */
 
@@ -50,14 +34,46 @@
 }
 
 /* ==========================================================================
+   Colors Used
+   ========================================================================== */
+
+/* Global variables used */
+
+:root
+{
+    --backgroundColor  : #EEEEEE;   /* light gray */
+    --headerBackgrColor: #808080;   /* smooth grey */
+    --headerTextColor  : #000000;   /* black */
+    --headerHoverColor : #D6CF40;   /* dark yellow */
+    --mainTitleColor   : #FFF645;   /* yellow gold */
+    --titleBackgrColor : #000000;   /* black */
+    --textBackgrColor  : #FFFFFF;   /* white */
+    --titleBackgrColor : #000000;   /* black */
+    --textColor        : #FFFFFF;   /* white */
+    --separatorColor   : #000000;   /* black */
+    --titleColor       : #000000;   /* black */
+    --subtitlesColor   : #000000;   /* black */
+    --linkColor        : #0000FF;   /* blue */
+    --linkHoverColor   : #228B22;   /* green forest */
+    --linkVisitedColor : #551a8b;   /* purple */
+    --anchorBackgrColor: #7D7D7D;   /* grey */
+    
+    --textFont     : 'Oxygen Light';
+    --headerFont   : 'Oxygen Bold';
+    --mainTitleFont: 'Century-Gothic';
+    --subtitlesFont: 'Oswald';
+    
+}
+
+/* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
 /* Body of all the content in the page */
 
 body{
-	background-color: #EEEEEE; /* color-primary-1 */
-	font-family: 'Oxygen Light';
+	background-color: var(--backgroundColor); 
+	font-family: var(--textFont);
 	font-size: 100%;
     margin: 0 auto; /* IMPORTANT --> these two things to make it centered and static */
     width:  1260px;
@@ -78,7 +94,7 @@ body{
   border-radius: 30px; /* Rounded corners */
   font-size: 20px; /* Increase font size */
   color: white;
-  background-color: grey;
+  background-color: var(--anchorBackgrColor);
 }
 
 .to_top:hover {
@@ -93,7 +109,7 @@ body{
 /* Header of the webpage */
 
 nav {
-  font-family: 'Oxygen Bold';
+  font-family: var(--headerFont);
   font-size: 20px;
   padding-top: 19px;
   margin-top: 10px;
@@ -101,12 +117,12 @@ nav {
   margin-bottom: 10px;
   text-align: center;
   text-transform: uppercase;
-  background-color: #808080; /* .color-primary-2 */
+  background-color: var(--headerBackgrColor); 
   position: static;
 }
 
 nav > a {
-  color: black;
+  color: var(--headerTextColor);
   flex: 1 1 auto;
   margin: 10px;
   padding: 20px;
@@ -136,7 +152,7 @@ nav > a {
     left: 50%;
     bottom: 0;
     height: 3px;
-    background: #FFF645;
+    background: var(--headerHoverColor);
   }
 
 #top a:hover::after {
@@ -155,18 +171,17 @@ nav > a {
 #Sinopsis , #Necesidades , #Tecnologias, #Impacto, #Referencias{
     padding-bottom: 20px;
     margin-bottom: 20px;
-    
-    background-color: #FFFFFF; /* .color-primary-4 */
+    background-color: var(--textBackgrColor); 
 }
 
 /* Titles of the different areas */
 
 .section_title{
-    font-family: ''Century-Gothic'';
+    font-family: var(--mainTitleFont);
     padding-top: 20px;
     text-align: center;
-    background-color: #000000; /* .color-primary-5 */
-    color: #FFF645; /* .color-primary-6 */
+    background-color: var(--titleBackgrColor); 
+    color: var(--mainTitleColor); /* .color-primary-6 */
     height: 60px;
     font-size: 25px;
 }
@@ -202,7 +217,7 @@ nav > a {
 /* Line that separates each gadget description */
 
 .separador{
-    color: #000000;
+    color: var(--separatorColor);
     width: auto;
     margin-top: 50px;
     overflow: visible;
@@ -259,13 +274,13 @@ nav > a {
 #Title1_1, #Title2_1, #Title3_1, #Title4_1, #Title5_1, #Title6_1, #Title7_1 , 
 .need_title_main ,
 #Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2 {
-    font-family: 'Oswald';
+    font-family: var(--subtitlesFont);
     font-style: italic;
     text-decoration: underline;
 }
 
 #Title1_2, #Title2_2, #Title3_2, #Title4_2, #Title5_2, #Title6_2, #Title7_2{
-    color: #000000;
+    color: var(--subtitlesColor);
     grid-column: 1 / 1;
     grid-row: 4;
 }
@@ -359,18 +374,18 @@ nav > a {
 /* Default settings for links in this area */
 
 .link a{
-    color: #0000FF; /* color-primary-7 */
+    color: var(--linkColor); 
 }
 
 /* Default settings for links in this area when mouse is over them */
 
 .link a:hover{
-    color: #FFA500; /* color-primary-8 */
+    color: var(--linkHoverColor); 
 }
 
 /* Default settings for links in this area after they are clicked */
 
 .link a:visited{
-    color: #551a8b; /* color-primary-9 */
+    color: var(--linkVisitedColor); 
 }
 
