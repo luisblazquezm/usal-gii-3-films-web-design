@@ -23,8 +23,8 @@
 /* For mobile phones: */
 @media (max-width: 686px){
   [id*="Text"]{
-      max-width: 500px;
-      max-height: 80px;
+      width: 500px;
+      height: 80px;
    }
 }
 
