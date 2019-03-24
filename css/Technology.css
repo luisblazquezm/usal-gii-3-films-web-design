@@ -22,8 +22,10 @@
 
 /* For mobile phones: */
 @media (min-width: 320px) and (max-width: 480px){
-  max-width: 500px;
-  max-height: 80px;
+  [id*="Text"]{
+      max-width: 500px;
+      max-height: 80px;
+   }
 }
 
   /* For tablets: */
