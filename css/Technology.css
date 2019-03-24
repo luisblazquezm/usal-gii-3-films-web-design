@@ -21,19 +21,19 @@
 .color-primary-13 { color: #6fba26 } /* lime */
 
 /* For mobile phones: */
-[class*="section"] [class*="need_value"] [id*="Text"]{
+@media (min-width: 320px) and (max-width: 480px){
   max-width: 500px;
   max-height: 80px;
 }
 
-@media only screen and (min-width: 600px) {
   /* For tablets: */
+@media only screen and (min-width: 600px) {
   .section {width: 8.33%;}
   .need {width: 16.66%;}
 }
 
-@media only screen and (min-width: 768px) {
   /* For desktop: */
+@media only screen and (min-width: 768px) {
   .section {width: 100.33%;}
   .need {width: 76.66%;}
 }
