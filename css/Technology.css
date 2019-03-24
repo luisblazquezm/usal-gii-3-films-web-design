@@ -23,7 +23,7 @@
 /* For mobile phones: */
 [class*="section"] [class*="need_value"] [id*="Text"]{
   width: 100%;
-  max-width: 120px;
+  height: 20%;
 }
 
 @media only screen and (min-width: 600px) {
