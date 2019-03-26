@@ -65,6 +65,26 @@
     
 }
 
+/* For mobile phones: */
+@media (min-width: 320px) and (max-width: 686px){
+  [id*="Text"]{
+      width: 500px;
+      height: 80px;
+   }
+}
+
+  /* For tablets: */
+@media only screen and (min-width: 600px) {
+  .section {width: 8.33%;}
+  .need {width: 16.66%;}
+}
+
+  /* For desktop: */
+@media only screen and (min-width: 268px) {
+  .section {width: 100.33%;}
+  .need {width: 94.66%;}
+}
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
