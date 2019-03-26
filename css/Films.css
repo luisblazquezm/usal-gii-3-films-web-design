@@ -66,11 +66,10 @@
 }
 
 /* For mobile phones: */
-@media (min-width: 320px) and (max-width: 686px){
-  [id*="Text"]{
-      width: 500px;
-      height: 80px;
-   }
+@media only screen and (max-width: 768px){
+  .section {width: 8.33%;}
+  .need {width: 16.66%;}
+  .media {width: 26.66%;}
 }
 
   /* For tablets: */
